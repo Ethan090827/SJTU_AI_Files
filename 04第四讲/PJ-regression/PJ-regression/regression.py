@@ -65,11 +65,11 @@ if __name__ == '__main__':
 
     # 构建并拟合线性回归模型
     model = LinearRegression()    # 创建线性回归模型对象
-    model.fit(  ,  )    # 使用数据拟合线性回归模型
+    model.fit(X_train, y_train)    # 使用数据拟合线性回归模型
 
     # 使用训练好的模型预测
-    y_pred = model.predict(  )    # 对特征进行预测
-    mse = mean_squared_error(  ,  )    # 计算均方误差（MSE）
+    y_pred = model.predict(X_test)    # 对特征进行预测
+    mse = mean_squared_error(y_test, y_pred)    # 计算均方误差（MSE）
 
     # 输出模型权重、偏置、均方误差
     print('权重:', model.coef_)
@@ -123,8 +123,8 @@ if __name__ == '__main__':
 
     # 定义线性回归模型并用训练数据进行拟合
     lin_reg = LinearRegression()
-    lin_reg.fit(  ,  )
+    lin_reg.fit(X_train, y_train)
 
     # 输入测试数据并输出预测结果和评估指标
-    result(lin_reg,   ,   )
+    result(lin_reg, X_test, y_test)
 
